@@ -3,31 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <title>This site can’t be reached</title>
+
 <style>
   body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background-color: #fff;
+    font-family: Arial, sans-serif;
+    background: #fff;
     color: #202124;
     margin: 0;
-    padding: 0;
   }
 
-  .container {
-    margin-left: 180px;
+  .wrap {
+    margin-left: 160px;
     margin-top: 100px;
     max-width: 600px;
   }
 
   h1 {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: normal;
     margin-bottom: 10px;
   }
 
-  p {
-    color: #5f6368;
+  .desc {
     font-size: 14px;
-    margin: 5px 0;
+    color: #5f6368;
+    margin-bottom: 20px;
+  }
+
+  .desc b {
+    color: #202124;
+    font-weight: 500;
+  }
+
+  .suggestions {
+    font-size: 14px;
+    color: #5f6368;
+    margin-top: 15px;
+  }
+
+  .suggestions li {
+    margin: 6px 0;
   }
 
   .code {
@@ -36,45 +51,57 @@
     color: #9aa0a6;
   }
 
-  .reload-btn {
+  button {
     margin-top: 25px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #1a73e8;
+    background: #1a73e8;
     color: white;
-    font-size: 14px;
+    border: none;
+    padding: 10px 18px;
     border-radius: 4px;
+    font-size: 14px;
     cursor: pointer;
   }
 
-  .reload-btn:hover {
-    background-color: #1669c1;
+  button:hover {
+    background: #1669c1;
   }
 
   .icon {
-    font-size: 50px;
+    width: 60px;
+    height: 60px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/7/71/Chrome_dinosaur_offline.png') no-repeat center;
+    background-size: contain;
     margin-bottom: 20px;
+    opacity: 0.6;
   }
 </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="icon">:(</div>
+  <div class="wrap">
+
+    <div class="icon"></div>
 
     <h1>This site can’t be reached</h1>
 
-    <p><strong>cdn-error</strong> refused to connect.</p>
+    <div class="desc">
+      <b>raisa-nullrelay</b> refused to connect.
+    </div>
 
-    <p>Try:</p>
-    <p>• Checking the connection</p>
-    <p>• Checking the proxy and the firewall</p>
+    <div class="suggestions">
+      Try:
+      <ul>
+        <li>Checking the connection</li>
+        <li>Checking the proxy and the firewall</li>
+      </ul>
+    </div>
 
     <div class="code">
       ERR_CONNECTION_REFUSED_7GkP9LmQ2s
     </div>
 
-    <button class="reload-btn" onclick="location.reload()">Reload</button>
+    <button onclick="location.reload()">Reload</button>
+
   </div>
 </body>
 </html>
