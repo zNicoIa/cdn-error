@@ -67,12 +67,10 @@
   }
 
   .icon {
-    width: 60px;
-    height: 60px;
-    background: url('https://upload.wikimedia.org/wikipedia/commons/7/71/Chrome_dinosaur_offline.png') no-repeat center;
-    background-size: contain;
+    width: 48px;
+    height: 48px;
     margin-bottom: 20px;
-    opacity: 0.6;
+    opacity: 0.7;
   }
 </style>
 </head>
@@ -80,7 +78,16 @@
 <body>
   <div class="wrap">
 
-    <div class="icon"></div>
+    <!-- Chrome-style dead page icon (inline SVG = sharper & no external link) -->
+    <div class="icon">
+      <svg viewBox="0 0 24 24" width="48" height="48" fill="#5f6368">
+        <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5"/>
+        <path d="M8 13h8M8 17h5" stroke="#5f6368" stroke-width="1.5" fill="none"/>
+        <circle cx="9" cy="9" r="1"/>
+        <circle cx="13" cy="9" r="1"/>
+        <path d="M8 11c1.5-1 4.5-1 6 0" stroke="#5f6368" stroke-width="1.2" fill="none"/>
+      </svg>
+    </div>
 
     <h1>This site can’t be reached</h1>
 
