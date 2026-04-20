@@ -2,113 +2,100 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>This site can’t be reached</title>
+<title>RAISA Secure Node</title>
 
 <style>
   body {
-    font-family: Arial, sans-serif;
-    background: #fff;
-    color: #202124;
+    background-color: #0b0f14;
+    color: #c7d0d9;
+    font-family: "Courier New", monospace;
     margin: 0;
   }
 
-  .wrap {
-    margin-left: 160px;
-    margin-top: 100px;
-    max-width: 600px;
+  .container {
+    padding: 60px;
+    max-width: 800px;
   }
 
-  h1 {
-    font-size: 24px;
-    font-weight: normal;
+  .header {
+    color: #7aa2f7;
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  .warning {
+    color: #ff5555;
+    margin-bottom: 30px;
+  }
+
+  .title {
+    font-size: 22px;
     margin-bottom: 10px;
   }
 
-  .desc {
-    font-size: 14px;
-    color: #5f6368;
-    margin-bottom: 20px;
+  .sub {
+    color: #8b949e;
+    margin-bottom: 25px;
   }
 
-  .desc b {
-    color: #202124;
-    font-weight: 500;
-  }
-
-  .suggestions {
-    font-size: 14px;
-    color: #5f6368;
-    margin-top: 15px;
-  }
-
-  .suggestions li {
-    margin: 6px 0;
+  .log {
+    background: #05080c;
+    padding: 20px;
+    border-left: 3px solid #7aa2f7;
+    font-size: 13px;
   }
 
   .code {
     margin-top: 20px;
-    font-size: 13px;
-    color: #9aa0a6;
+    color: #6e7681;
+    font-size: 12px;
   }
 
-  button {
-    margin-top: 25px;
-    background: #1a73e8;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
+  .blink {
+    animation: blink 1s infinite;
   }
 
-  button:hover {
-    background: #1669c1;
-  }
-
-  .icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 20px;
-    opacity: 0.7;
+  @keyframes blink {
+    50% { opacity: 0; }
   }
 </style>
 </head>
 
 <body>
-  <div class="wrap">
 
-    <!-- Chrome-style dead page icon (inline SVG = sharper & no external link) -->
-    <div class="icon">
-      <svg viewBox="0 0 24 24" width="48" height="48" fill="#5f6368">
-        <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5"/>
-        <path d="M8 13h8M8 17h5" stroke="#5f6368" stroke-width="1.5" fill="none"/>
-        <circle cx="9" cy="9" r="1"/>
-        <circle cx="13" cy="9" r="1"/>
-        <path d="M8 11c1.5-1 4.5-1 6 0" stroke="#5f6368" stroke-width="1.2" fill="none"/>
-      </svg>
-    </div>
+<div class="container">
 
-    <h1>This site can’t be reached</h1>
-
-    <div class="desc">
-      <b>raisa-nullrelay</b> refused to connect.
-    </div>
-
-    <div class="suggestions">
-      Try:
-      <ul>
-        <li>Checking the connection</li>
-        <li>Checking the proxy and the firewall</li>
-      </ul>
-    </div>
-
-    <div class="code">
-      ERR_CONNECTION_REFUSED_7GkP9LmQ2s
-    </div>
-
-    <button onclick="location.reload()">Reload</button>
-
+  <div class="header">
+    RAISA INTERNAL NETWORK // NODE: NULLRELAY-47
   </div>
+
+  <div class="warning">
+    ⚠ AUTHORIZED PERSONNEL ONLY
+  </div>
+
+  <div class="title">
+    Connection Failure
+  </div>
+
+  <div class="sub">
+    Unable to establish secure link to remote endpoint.
+  </div>
+
+  <div class="log">
+    > Initializing handshake...<br>
+    > Verifying credentials...<br>
+    > Access node unreachable.<br>
+    > Retrying...<br>
+    > Retrying...<br>
+    > <span class="blink">Connection terminated.</span>
+  </div>
+
+  <div class="code">
+    ERROR_CODE: NR-47-7GkP9LmQ2s
+  </div>
+
+</div>
+
 </body>
 </html>
